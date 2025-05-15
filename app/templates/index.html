@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PersonaFilm | AI Movie Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>PersonaFilm | AI Movie Recommendations</h1>
+            <p>Your personalized movie recommendation system powered by NLP and machine learning</p>
+            <div class="user-section">
+                <input type="text" id="username" placeholder="Enter your username">
+                <button id="register-btn">Register / Login</button>
+            </div>
+        </div>
+        
+        <div class="search-container">
+            <div class="tabs">
+                <div id="tab-popular" class="tab active" data-tab="popular">Popular</div>
+                <div id="tab-search" class="tab" data-tab="search">Search</div>
+                <div id="tab-recommendations" class="tab" data-tab="recommendations">For You</div>
+            </div>
+            
+            <div id="search-box" class="search-box" style="display:none;">
+                <input type="text" id="search-input" placeholder="Search for movies by title or genre...">
+                <button id="search-btn">Search</button>
+            </div>
+        </div>
+        
+        <div id="movie-list" class="movie-list">
+            <!-- Content will be loaded here -->
+        </div>
+        
+        <div id="loading" class="loading" style="display:none;">
+            <div class="spinner"></div>
+            <p>Loading movies...</p>
+        </div>
+        
+        <div id="user-stats" class="user-stats" style="display:none;">
+            <h3>Your Activity</h3>
+            <p>Movies rated: <span id="rated-count">0</span></p>
+            <p>Feedback provided: <span id="feedback-count">0</span></p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

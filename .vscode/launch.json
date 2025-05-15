@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Flask App",
+            "type": "python",
+            "request": "launch",
+            "module": "flask",
+            "env": {
+                "FLASK_APP": "run.py",
+                "FLASK_ENV": "development"
+            },
+            "args": [
+                "run",
+                "--no-debugger",
+                "--host=0.0.0.0"
+            ],
+            "jinja": true
+        },
+        {
+            "name": "Initialize System",
+            "type": "python",
+            "request": "launch",
+            "program": "/initialize_system.py",
+            "args": [],
+            "console": "integratedTerminal"
+        }
+    ]
+}

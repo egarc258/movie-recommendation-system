@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  movie-recommender:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./app/data:/app/app/data
+      - ./app/models:/app/app/models
+    environment:
+      - FLASK_ENV=production
+      - SECRET_KEY=your-secret-key-here
